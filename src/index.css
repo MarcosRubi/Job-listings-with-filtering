@@ -1,0 +1,213 @@
+:root {
+   --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+   --Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
+   --Light-Grayish-Cyan-Filter-Tablets: hsl(180, 31%, 95%);
+   --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+   --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-size: 15px;
+   font-family: "League Spartan", sans-serif;
+   background-color: var(--Light-Grayish-Cyan-Background);
+}
+
+header {
+   background-color: white;
+   padding: 20px;
+   transform: translateY(-2rem) scale(0.8);
+   border-radius: 5px;
+   box-shadow: var(--Desaturated-Dark-Cyan) 0px 3px 20px;
+   font-weight: 700;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 300ms;
+}
+header.visible {
+   visibility: visible;
+   opacity: 1;
+   transform: translateY(-2rem) scale(1);
+}
+ul {
+   list-style: none;
+   gap: 10px 20px;
+}
+ul span {
+   background-color: var(--Light-Grayish-Cyan-Filter-Tablets);
+   padding: 8px;
+   color: var(--Desaturated-Dark-Cyan);
+   border-radius: 5px;
+}
+
+.main-container {
+   width: 95%;
+   max-width: 1440px;
+   margin: 0px auto;
+}
+.container {
+   width: 90%;
+   margin: 0 auto;
+}
+
+.d-flex {
+   display: flex;
+}
+.flex-wrap {
+   flex-wrap: wrap;
+}
+.align-center {
+   align-items: center;
+}
+.jc-between {
+   justify-content: space-between;
+}
+.flex-column-sm {
+   flex-direction: column;
+}
+.btn-remove {
+   align-self: stretch;
+   padding: 0 10px;
+   border: none;
+   background-color: var(--Desaturated-Dark-Cyan);
+   border-radius: 0px 3px 3px 0px;
+   transition: all 300ms;
+   cursor: pointer;
+}
+.btn-remove:hover {
+   background-color: var(--Very-Dark-Grayish-Cyan);
+}
+.hero {
+   background-image: url(./assets/bg-header-mobile.svg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-color: var(--Desaturated-Dark-Cyan);
+   min-height: 25vh;
+}
+.clear {
+   margin-right: 10px;
+   color: var(--Dark-Grayish-Cyan);
+   cursor: pointer;
+   font-size: 1.1rem;
+}
+.clear:hover {
+   text-decoration: underline;
+   color: var(--Desaturated-Dark-Cyan);
+}
+.jobs {
+   max-width: 1000px;
+   margin: 0px auto;
+}
+
+.job__card {
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   padding: 0px 10px 20px 10px;
+   border-radius: 5px;
+   margin: 50px 0;
+   background-color: white;
+}
+.job__card.border {
+   border-left: 3px solid var(--Desaturated-Dark-Cyan);
+}
+.job__card img {
+   transform: translateY(-1rem);
+   max-width: 3rem;
+}
+.job__card .company {
+   color: var(--Desaturated-Dark-Cyan);
+   font-weight: 700;
+   padding-right: 10px;
+}
+.badge {
+   color: var(--Light-Grayish-Cyan-Filter-Tablets);
+   padding: 5px 8px;
+   border-radius: 10px;
+   text-transform: uppercase;
+   font-size: 0.8rem;
+   letter-spacing: 2px;
+   margin: 0px 5px;
+}
+.job__card .badge--new {
+   background-color: var(--Desaturated-Dark-Cyan);
+}
+.job__card .badge--featured {
+   background-color: var(--Very-Dark-Grayish-Cyan);
+}
+.position {
+   margin: 10px 0px;
+   font-weight: 700;
+}
+.stats {
+   color: var(--Dark-Grayish-Cyan);
+}
+.break {
+   margin: 0px 10px;
+}
+.job__card hr {
+   margin: 20px 0px;
+}
+.categories {
+   font-weight: 700;
+   font-size: 1rem;
+}
+.categories li {
+   margin: 0px 15px 10px 0px;
+   cursor: pointer;
+}
+.categories li.hiden {
+   display: none;
+}
+.attribution {
+   text-align: center;
+   margin: 10px 0;
+}
+.attribution a {
+   text-decoration: none;
+   color: var(--Desaturated-Dark-Cyan);
+}
+.message {
+   text-align: center;
+   color: var(--Desaturated-Dark-Cyan);
+   font-size: 3rem;
+}
+.sleepImg {
+   width: 50%;
+   margin: 30px auto;
+}
+@media (min-width: 768px) {
+   .flex-column-sm {
+      flex-direction: row;
+   }
+   .d-flex-md {
+      display: flex;
+   }
+   .hero {
+      background-image: url(./assets/bg-header-desktop.svg);
+   }
+   .languages {
+      flex-grow: 1;
+      justify-content: flex-end;
+   }
+   .languages li {
+      margin: 5px 0px;
+   }
+   .job__card {
+      padding: 20px;
+      margin: 20px 0;
+   }
+   .job__card hr {
+      display: none;
+   }
+   .job__card img {
+      margin-right: 0.5rem;
+      transform: translateY(0rem);
+      max-width: 4rem;
+   }
+   .job__info {
+      flex-grow: 1;
+   }
+}
